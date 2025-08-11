@@ -1,0 +1,66 @@
+/* Centered container */
+.enter-pin-container {
+  color: black;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* PIN input styling */
+.pin-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pin-inputs input {
+  color: black;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid #d3d3d3; /* light gray border */
+  border-radius: 8px;
+  outline: none;
+  background-color: white; /* white background for clarity */
+}
+
+.pin-inputs input:focus {
+  border-color: #007bff;
+}
+
+/* Buttons */
+.verify-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  display: block;          
+  margin: 0 auto;         
+  max-width: 100%;         
+  width: 280px;            
+  box-sizing: border-box;
+}
+
+.verify-btn:hover {
+  background-color: #0056b3;
+}
+
+.return-link {
+  margin-top: 15px;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.return-link:hover {
+  text-decoration: underline;
+}

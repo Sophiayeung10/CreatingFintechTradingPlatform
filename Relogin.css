@@ -1,0 +1,22 @@
+/* Relogin.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.relogin-container {
+  max-width: 420px;
+  margin: 5vh auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+}
+
+.relogin-container h2 {
+  font-size: 1.8rem;
+  margin-

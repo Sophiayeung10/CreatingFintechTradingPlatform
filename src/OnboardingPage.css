@@ -1,0 +1,232 @@
+/* ────── 1. OUTERMOST CONTAINER ────── */
+.onboarding-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.onboarding-container > .left-panel:empty,
+.onboarding-container > .right-panel:empty {
+  display: none !important;
+}
+
+/* ────── 2. LEFT PANEL (IMAGE) ────── */
+.left-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ────── 3. RIGHT PANEL (CONTENT) ────── */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 14px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+}
+
+/* ─── Headings & paragraphs ─── */
+.right-panel h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  max-width: 460px;
+  width: 100%;
+  text-align: left;
+  color: #333;
+}
+
+.right-panel p {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 12px 0; /* Added bottom margin for spacing */
+  max-width: 460px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Terms */
+.terms {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.terms a {
+  color: #0f9c6d;
+  text-decoration: underline;
+}
+
+/* ────── 4. DIVIDER ────── */
+.divider {
+  font-weight: bold;
+  color: #939699;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 460px;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* ────── 5. BUTTONS (GREEN OUTLINE BOX STYLE) ────── */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 460px;
+  padding: 14px 20px;
+
+  border: 2px solid #10b981; /* Green outline */
+  border-radius: 8px;
+  background: transparent;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #10b981;
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #10b981;
+  color: #ffffff;
+  transform: scale(1.05); /* Button gets bigger on hover */
+}
+
+button:active {
+  background: #059669;
+  color: #ffffff;
+  transform: scale(0.98); 
+}
+
+/* Icon helper */
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ────── 5a. SOCIAL BUTTON OVERRIDES ────── */
+.social-btn.google,
+.social-btn.apple,
+.social-btn.twitter {
+  background: transparent;
+  color: #333;
+  border: 1px solid #039765;
+}
+
+/* ────── 5b. SIGN‑UP & LOGIN OVERRIDES ────── */
+.signup-btn {
+  background: #059669;
+  color: #ffffff;
+  border: 1px solid #10b981;
+}
+
+
+button.login-button {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #039765 !important;
+  width: 500px;
+  border-radius: 8px;
+}
+
+.apple-login {
+  color: #0f8c62;
+  border-color: #0f8c62;
+  color: black;
+  background-color: white;
+}
+
+
+.email-input, .phone-input, .sendCode,.reactive-input,.unlock-input{
+  background: transparent;
+  color: #333;
+  border: 1px solid #039765;
+}
+
+.pin-input {
+  background: transparent;
+  color: #333;
+  border: 1px solid #039765;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.submit-button {
+  background: transparent;
+  color: #333;
+  border: 1px solid #039765;
+  width: 500px;
+}
+
+
+/* ────── 6. INPUT FIELDS (NEW) ────── */
+.right-panel input[type="text"],
+.right-panel input[type="email"],
+.right-panel input[type="tel"] {
+  width: 100%;
+  max-width: 460px;
+  padding: 12px 16px;
+  border: 2px solid #10b981; /* same green outline */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: 12px; /* spacing below inputs */
+}
+
+.right-panel input[type="text"]:focus,
+.right-panel input[type="email"]:focus,
+.right-panel input[type="tel"]:focus {
+  border-color: #059669; /* darker green on focus */
+}
+
+/* Smaller signup button inside paragraph */
+.right-panel p .signup-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  max-width: fit-content;
+}
+
+.right-panel p .signup-btn:hover {
+  background: #047857;
+  border-color: #047857;
+  color: white;
+}
